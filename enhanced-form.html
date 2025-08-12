@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Form Mastery</title>
+    <meta name="description" content="Demonstration of HTML5 content elements and advanced form techniques">
+</head>
+
+<body>
+    <header>
+        <h1>HTML5 Content & Form Mastery</h1>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#content-demo">Content Demo</a></li>
+                <li><a href="#form-demo">Form Demo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Content Demonstration Section -->
+        <section id="content-demo" aria-labelledby="content-heading">
+            <h2 id="content-heading">Content Elements Demonstration</h2>
+            
+            <article>
+                <h3>Lists in HTML5</h3>
+                
+                <h4>Ordered List (Steps)</h4>
+                <ol>
+                    <li>Start your education</li>
+                    <li>Finish your studies</li>
+                    <li>Develop your own projects</li>
+                    <li>Look for work</li>
+                </ol>
+                
+                <h4>Unordered List (Features)</h4>
+                <ul>
+                    <li>Responsive design</li>
+                    <li>Cross-browser compatibility</li>
+                    <li>Accessibility features</li>
+                </ul>
+                
+                <h4>Description List (Terminology)</h4>
+                <dl>
+                    <dt>HTML5</dt>
+                    <dd>HyperText Markup Language version 5</dd>
+                    <dt>CSS3</dt>
+                    <dd>Cascading Style Sheets version 3</dd>
+                </dl>
+            </article>
+            
+            <article>
+                <h3>Tables in HTML5</h3>
+                <table>
+                    <caption>Student Information Report</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Admission Number</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Year Of Study</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1001</th>
+                            <td>Peace</td>
+                            <td>Williams</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1004</th>
+                            <td>Emmanuel</td>
+                            <td>Charles</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row">1008</th>
+                            <td>Chris</td>
+                            <td>Jackson</td>
+                            <td>1</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </article>
+            
+            <article>
+                <h3>Media in HTML5</h3>
+                
+                <h4>Image with Figure/Figcaption</h4>
+                <figure>
+                    <img src="https://via.placeholder.com/400x200" alt="Sample placeholder image" width="400" height="200">
+                    <figcaption>Example of a placeholder image with proper semantic markup</figcaption>
+                </figure>
+                
+                <h4>Audio Element</h4>
+                <audio controls>
+                    <source src="sample.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                
+                <h4>Video Element</h4>
+                <video controls width="400">
+                    <source src="sample.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </article>
+        </section>
+
+        <!-- Form Demonstration Section -->
+        <section id="form-demo" aria-labelledby="form-heading">
+            <h2 id="form-heading">Advanced HTML5 Form</h2>
+            
+            <form id="registration-form" novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div>
+                        <label for="fullname">Full Name*:</label>
+                        <input type="text" id="fullname" name="fullname" required 
+                               minlength="3" maxlength="50"
+                               placeholder="John Doe">
+                        <small>Minimum 3 characters</small>
+                    </div>
+                    
+                    <div>
+                        <label for="email">Email*:</label>
+                        <input type="email" id="email" name="email" required
+                               placeholder="user@example.com">
+                    </div>
+                    
+                    <div>
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" 
+                               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                               placeholder="123-456-7890">
+                        <small>Format: 123-456-7890</small>
+                    </div>
+                    
+                    <div>
+                        <label for="birthdate">Birth Date:</label>
+                        <input type="date" id="birthdate" name="birthdate"
+                               min="1900-01-01" max="2023-12-31">
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Account Details</legend>
+                    
+                    <div>
+                        <label for="username">Username*:</label>
+                        <input type="text" id="username" name="username" required
+                               minlength="4" maxlength="20"
+                               pattern="[a-zA-Z0-9]+"
+                               placeholder="johndoe123">
+                        <small>4-20 alphanumeric characters</small>
+                    </div>
+                    
+                    <div>
+                        <label for="password">Password*:</label>
+                        <input type="password" id="password" name="password" required
+                               minlength="8" 
+                               placeholder="••••••••">
+                        <small>Minimum 8 characters</small>
+                    </div>
+                    
+                    <div>
+                        <label for="confirm-password">Confirm Password*:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" required
+                               placeholder="••••••••">
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Preferences</legend>
+                    
+                    <div>
+                        <label for="avatar">Profile Picture:</label>
+                        <input type="file" id="avatar" name="avatar"
+                               accept="image/png, image/jpeg">
+                    </div>
+                    
+                    <div>
+                        <label for="color">Favorite Color:</label>
+                        <input type="color" id="color" name="color" value="#ff0000">
+                    </div>
+                    
+                    <div>
+                        <label for="website">Website:</label>
+                        <input type="url" id="website" name="website"
+                               placeholder="https://example.com">
+                    </div>
+                    
+                    <div>
+                        <label>Subscription Level:</label>
+                        <select name="subscription" required>
+                            <option value="" selected disabled>Select an option</option>
+                            <option value="free">Free</option>
+                            <option value="basic">Basic ($9.99/month)</option>
+                            <option value="premium">Premium ($19.99/month)</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label>Interests:</label>
+                        <div>
+                            <input type="checkbox" id="interest-web" name="interests" value="web">
+                            <label for="interest-web">Web Development</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="interest-design" name="interests" value="design">
+                            <label for="interest-design">Design</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="interest-marketing" name="interests" value="marketing">
+                            <label for="interest-marketing">Marketing</label>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label>Preferred Contact Method:</label>
+                        <div>
+                            <input type="radio" id="contact-email" name="contact" value="email" checked>
+                            <label for="contact-email">Email</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="contact-phone" name="contact" value="phone">
+                            <label for="contact-phone">Phone</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="contact-text" name="contact" value="text">
+                            <label for="contact-text">Text Message</label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Additional Information</legend>
+                    
+                    <div>
+                        <label for="bio">Biography:</label>
+                        <textarea id="bio" name="bio" rows="4" 
+                                  placeholder="Tell us about yourself..."></textarea>
+                    </div>
+                    
+                    <div>
+                        <label for="experience">Years of Experience:</label>
+                        <input type="number" id="experience" name="experience"
+                               min="0" max="50" step="1">
+                    </div>
+                    
+                    <div>
+                        <label for="rate">Hourly Rate ($):</label>
+                        <input type="range" id="rate" name="rate" min="10" max="200" step="5" value="50">
+                        <output for="rate" id="rate-output">50</output>
+                    </div>
+                </fieldset>
+                
+                <div>
+                    <input type="reset" value="Reset Form">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 HTML5 Demonstration. All rights reserved.</p>
+        <address>
+            Contact: <a href="mailto:mmbakapamella@gmail.com">mmbakapamella@gmail.com</a>
+        </address>
+    </footer>
+
+    <script>
+        // Simple script to update range input output (not required for assignment)
+        document.getElementById('rate').addEventListener('input', function() {
+            document.getElementById('rate-output').value = this.value;
+        });
+    </script>
+</body>
+</html>
